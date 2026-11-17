@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои задачи — To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Мои задачи</h1>
+            <p>Планируй свой день и достигай целей</p>
+        </header>
+
+        <main>
+
+            <div class="task-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Введите новую задачу..."
+                >
+
+                <button id="addTaskBtn">Добавить</button>
+            </div>
+
+            <div class="task-info">
+                    <span>Мой список</span>
+                    <span id="taskCounter">0 задач</span>
+                </div>
+
+                <!-- Фильтры задач -->
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">
+                        Все
+                    </button>
+
+                    <button class="filter-btn" data-filter="active">
+                        Активные
+                    </button>
+
+                    <button class="filter-btn" data-filter="completed">
+                        Выполненные
+                    </button>
+                </div>
+
+                <!-- Сообщение при пустом списке -->
+                <div id="emptyMessage" class="empty-message">
+                    <div class="empty-icon">📝</div>
+                    <h3>Пока нет задач</h3>
+                    <p>Добавь свою первую задачу!</p>
+                </div>
+
+                <!-- Список задач -->
+                <ul id="taskList"></ul>
+
+                <!-- Количество оставшихся задач -->
+            <div id="remainingCounter" class="remaining-counter"></div>
+
+            <ul id="taskList">
+                <!-- Здесь будут отображаться задачи -->
+            </ul>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* Сбрасываем стандартные отступы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Основной фон страницы */
+body {
+    font-family: 'Manrope', sans-serif;
+    background: #F3EBDD;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Основной контейнер */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #FFFCF6;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+    color: #222b45;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #8492a6;
+    font-size: 15px;
+}
+
+/* Поле ввода и кнопка */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.task-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dce1eb;
+    border-radius: 8px;
+    font-size: 17px;
+    outline: none;
+}
+
+.task-input input:focus {
+    border-color: #536dfe;
+}
+
+.task-input button {
+    padding: 14px 20px;
+    background: #8B6548;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.task-input button:hover {
+    background: #735139;
+}
+
+/* Информация о задачах */
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #8492a6;
+    font-size: 14px;
+}
+
+/* Список задач */
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item span {
+    flex: 1;
+    color: #222b45;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.task-item .completed {
+    text-decoration: line-through;
+    color: #a0a8b8;
+}
+
+.task-item button {
+    background: #ffeded;
+    color: #e34b4b;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Панель фильтров */
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 7px;
+    background: #f1f3f9;
+    color: #8492a6;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.filter-btn:hover {
+    background: #e5e9f5;
+}
+
+.filter-btn.active {
+    background: #8B6548;
+    color: white;
+}
+
+/* Кнопка удаления */
+.task-item .delete-btn {
+    background: #fff0f0;
+    color: #e34b4b;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 11px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.task-item .delete-btn:hover {
+    background: #ffe0e0;
+}
+
+/* Пустой список */
+.empty-message {
+    text-align: center;
+    padding: 35px 15px;
+    color: #8492a6;
+}
+
+.empty-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.empty-message h3 {
+    color: #222b45;
+    margin-bottom: 8px;
+}
+
+/* Количество оставшихся задач */
+.remaining-counter {
+    margin-top: 20px;
+    color: #8492a6;
+    font-size: 13px;
+}
+
+/* Адаптация фильтров */
+@media (max-width: 480px) {
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        flex: 1;
+        padding: 9px 8px;
+    }
+}
+
+/* Адаптация для телефонов */
+@media (max-width: 480px) {
+    .container {
+        padding: 22px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+}
+
+/* ===== COFFEE & CREAM THEME ===== */
+
+/* Основной текст */
+body {
+    color: #4A382B;
+}
+
+/* Заголовок */
+header h1 {
+    color: #4A382B;
+}
+
+/* Второстепенный текст */
+header p,
+.task-info,
+.remaining-counter {
+    color: #806B58;
+}
+
+/* Поле ввода */
+.task-input input {
+    background: #FFFCF6;
+    border-color: #E2D3C1;
+    color: #4A382B;
+    font-weight: 500;
+}
+
+.task-input input::placeholder {
+    color: #A18D78;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Неактивные фильтры */
+.filter-btn {
+    background: #EDE2D3;
+    color: #806B58;
+}
+
+.filter-btn:hover {
+    background: #E2D2BF;
+}
+
+/* Активный фильтр */
+.filter-btn.active {
+    background: #8B6548;
+    color: #FFFFFF;
+}
+
+/* Текст задач */
+.task-item span {
+    color: #4A382B;
+}
+
+.task-item span {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.task-item span:hover {
+    color: #8B6548;
+}
+
+/* Выполненные задачи */
+.task-item .completed {
+    color: #A18D78;
+}
+
+/* Разделители */
+.task-item {
+    border-bottom-color: #EDE2D3;
+}
+
+/* Чекбоксы */
+.task-item input[type="checkbox"] {
+    accent-color: #8B6548;
+}
+
+/* Удаление */
+.task-item .delete-btn {
+    background: #F5E6DE;
+    color: #B36D57;
+}
+
+.task-item .delete-btn:hover {
+    background: #EED5C9;
+}
+
+/* Пустой список */
+.empty-message h3 {
+    color: #4A382B;
+}
+
+.empty-message p {
+    color: #806B58;
+}
