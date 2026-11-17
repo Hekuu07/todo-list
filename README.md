@@ -5,6 +5,8 @@
 🌐 Live Demo
 
 Открыть приложение
+## 📸 Скриншот приложения
+![To-Do List Preview](screenshot.png)
 
 📌 О проекте
 
